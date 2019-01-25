@@ -1,5 +1,5 @@
 {
-  "name": "passport-google-oauth20",
+  "name": "passport-google-oauth20-without-google-plus",
   "version": "1.0.0",
   "description": "Google (OAuth 2.0) authentication strategy for Passport.",
   "keywords": [
@@ -11,16 +11,15 @@
     "identity"
   ],
   "author": {
-    "name": "Jared Hanson",
-    "email": "jaredhanson@gmail.com",
-    "url": "http://www.jaredhanson.net/"
+    "name": "Himanshu Pndey",
+    "email": "himanshu_03@hotmail.com",
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/jaredhanson/passport-google-oauth2.git"
+    "url": "git://github.com/himanshu0511/passport-google-oauth2.git"
   },
   "bugs": {
-    "url": "http://github.com/jaredhanson/passport-google-oauth2/issues"
+    "url": "git://github.com/himanshu0511/passport-google-oauth2/issues"
   },
   "license": "MIT",
   "licenses": [
