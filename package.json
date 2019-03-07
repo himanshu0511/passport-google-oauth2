@@ -1,6 +1,6 @@
 {
   "name": "passport-google-oauth20-without-google-plus",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Google (OAuth 2.0) authentication strategy for Passport with changes required for google plus depreciation",
   "keywords": [
     "passport",
