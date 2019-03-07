@@ -1,38 +1,23 @@
-# passport-google-oauth20
+# Passport strategy for Google OAuth 2.0
 
-[Passport](http://passportjs.org/) strategy for authenticating with [Google](http://www.google.com/)
-using the OAuth 2.0 API.
-
-This module lets you authenticate using Google in your Node.js applications.
-By plugging into Passport, Google authentication can be easily and
-unobtrusively integrated into any application or framework that supports
-[Connect](http://www.senchalabs.org/connect/)-style middleware, including
-[Express](http://expressjs.com/).
-
----
-
-<p align="center"><a href="http://www.tkqlhce.com/click-8907558-13433666" target="_top">1Password, the only password manager you should trust.</a> Industry-leading security and award winning design.</p>
-
----
-
-Status:
-[![Build](https://img.shields.io/travis/jaredhanson/passport-google-oauth2.svg)](https://travis-ci.org/jaredhanson/passport-google-oauth2)
-[![Coverage](https://img.shields.io/coveralls/jaredhanson/passport-google-oauth2.svg)](https://coveralls.io/r/jaredhanson/passport-google-oauth2)
-[![Quality](https://img.shields.io/codeclimate/github/jaredhanson/passport-google-oauth2.svg?label=quality)](https://codeclimate.com/github/jaredhanson/passport-google-oauth2)
-[![Dependencies](https://img.shields.io/david/jaredhanson/passport-google-oauth2.svg)](https://david-dm.org/jaredhanson/passport-google-oauth2)
-
+[![NPM version](https://img.shields.io/npm/v/@passport-next/passport-google-oauth2.svg)](https://www.npmjs.com/package/@passport-next/passport-google-oauth2)
+[![Build Status](https://travis-ci.org/passport-next/passport-google-oauth2.svg?branch=master)](https://travis-ci.org/passport-next/passport-google-oauth2)
+[![Coverage Status](https://coveralls.io/repos/github/passport-next/passport-google-oauth2/badge.svg?branch=master)](https://coveralls.io/github/passport-next/passport-google-oauth2?branch=master)
+[![Maintainability](https://api.codeclimate.com/v1/badges/7c817d8118420a47390a/maintainability)](https://codeclimate.com/github/passport-next/passport-google-oauth2/maintainability)
+[![Dependencies](https://david-dm.org/passport-next/passport-google-oauth2.png)](https://david-dm.org/passport-next/passport-google-oauth2)
+<!--[![SAST](https://gitlab.com/passport-next/passport-google-oauth2/badges/master/build.svg)](https://gitlab.com/passport-next/passport-google-oauth2/badges/master/build.svg)-->
 
 ## Install
 
 ```bash
-$ npm install passport-google-oauth20
+$ npm install @passport-next/passport-google-oauth2
 ```
 
 ## Usage
 
 #### Create an Application
 
-Before using `passport-google-oauth20`, you must register an application with
+Before using `@passport-next/passport-google-oauth2`, you must register an application with
 Google.  If you have not already done so, a new project can be created in the
 [Google Developers Console](https://console.developers.google.com/).
 Your application will be issued a client ID and client secret, which need to be
@@ -50,7 +35,7 @@ Google profile.  The `verify` callback must call `cb` providing a user to
 complete authentication.
 
 ```javascript
-var GoogleStrategy = require('passport-google-oauth20').Strategy;
+var GoogleStrategy = require('@passport-next/passport-google-oauth2').Strategy;
 
 passport.use(new GoogleStrategy({
     clientID: GOOGLE_CLIENT_ID,
@@ -84,28 +69,6 @@ app.get('/auth/google/callback',
     res.redirect('/');
   });
   ```
-
-#### Google Plus API Deprecation
-
-The default for `passport-google-oauth2` is to use the Google+ People API to
-get the profile information for the user signing in.  With this API being
-removed in early 2019 you should look towards using the OAuth 2 User Info
-endpoint instead.  You can switch to this endpoint using this configuration
-option.
-
-```javascript
-new GoogleStrategy({
-  clientID: GOOGLE_CLIENT_ID,
-  clientSecret: GOOGLE_CLIENT_SECRET,
-  callbackURL: "http://www.example.com/auth/google/callback",
-  // This option tells the strategy to use the userinfo endpoint instead
-  userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo",
-}
-```
-
-The structure of the `profile` object will be the same but you may get
-less profile information than you did before.
-
 ## Examples
 
 Developers using the popular [Express](http://expressjs.com/) web framework can
@@ -114,16 +77,3 @@ as a starting point for their own web applications.  The example shows how to
 authenticate users using Facebook.  However, because both Facebook and Google
 use OAuth 2.0, the code is similar.  Simply replace references to Facebook with
 corresponding references to Google.
-
-## Sponsorship
-
-Passport is open source software.  Ongoing development is made possible by
-generous contributions from [individuals and corporations](https://github.com/jaredhanson/passport/blob/master/SPONSORS.md).
-To learn more about how you can help keep this project financially sustainable,
-please visit Jared Hanson's page on [Patreon](https://www.patreon.com/jaredhanson).
-
-## License
-
-[The MIT License](http://opensource.org/licenses/MIT)
-
-Copyright (c) 2012-2016 Jared Hanson <[http://jaredhanson.net/](http://jaredhanson.net/)>

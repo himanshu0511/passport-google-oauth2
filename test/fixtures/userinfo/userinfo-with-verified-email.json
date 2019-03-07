@@ -1,8 +1,8 @@
 {
   "sub": "111111111111111111111",
-  "name": "Jared Hanson",
-  "given_name": "Jared",
-  "family_name": "Hanson",
+  "name": "First Last",
+  "given_name": "First",
+  "family_name": "Last",
   "picture": "https://lh3.googleusercontent.com/-XxXXxxXxXXX/AAAAAAAAAAI/AAAAAAAAAAA/0000xxxxx0X/photo.jpg",
   "email": "example@gmail.com",
   "verified_email": true,

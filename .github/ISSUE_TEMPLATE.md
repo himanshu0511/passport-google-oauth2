@@ -1,29 +1,10 @@
 ** READ THIS FIRST! **
 
-#### Are you looking for help?
-
-Reminder: The issue tracker is not a support forum.
-
-Issues should only be filed in this project once they are able to be reproduced
-and confirmed as a flaw in the software or incorrect information in associated
-documention.
-
-If you are encountering problems integrating this module into your application,
-please post a question on the [discussion forum](https://github.com/passport/discuss)
-rather than filing an issue.
-
 #### Is this a security issue?
 
-Do not open issues that might have security implications.  Potential security
-vulnerabilities should be reported privately to jaredhanson@gmail.com.  Once any
-vulerabilities have been repaired, the details will be disclosed publicly in a
-responsible manner.  This also allows time for coordinating with affected parties
-in order to mitigate negative consequences.
-
-
-If neither of the above two scenarios apply to your situation, you should open
-an issue.  Delete this paragraph and the text above, and fill in the information
-requested below.
+If you discover a security issue please create an issue stating you've discovered a security
+issue but don't divulge the issue, one of the maintainers will respond with an email address
+you can send the details to. Once the issue has been patched the details can be made public.
 
 <!-- Provide a brief summary of the issue in the title field above. -->
 
@@ -50,5 +31,4 @@ requested below.
 
 * Operating System: 
 * Node version: <!-- $ node -v -->
-* passport version: <!-- $ npm list passport -->
-* passport-google-oauth2 version: <!-- $ npm list passport-google-oauth2 -->
+* passport version: <!-- $ npm list @passport-next/passport -->

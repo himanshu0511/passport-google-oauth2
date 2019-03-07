@@ -20,6 +20,8 @@
   },
   "bugs": {
     "url": "git://github.com/himanshu0511/passport-google-oauth2/issues"
+    "name": "Rowan Wookey",
+    "email": "admin@rwky.net"
   },
   "license": "MIT",
   "licenses": [
@@ -30,18 +32,24 @@
   ],
   "main": "./lib",
   "dependencies": {
-    "passport-oauth2": "1.x.x"
+    "@passport-next/passport-oauth2": "1.7.x"
   },
   "devDependencies": {
     "make-node": "0.3.x",
-    "mocha": "1.x.x",
-    "chai": "2.x.x",
-    "chai-passport-strategy": "1.x.x"
+    "mocha": "5.x.x",
+    "chai": "4.x.x",
+    "@passport-next/chai-passport-strategy": "1.1.x",
+    "eslint-config-airbnb-base": "13.1.x",
+    "eslint-plugin-import": "2.14.x",
+    "eslint": "5.12.x"
   },
   "engines": {
-    "node": ">= 0.4.0"
+    "node": ">=6"
   },
   "scripts": {
-    "test": "node_modules/.bin/mocha --require test/bootstrap/node test/*.test.js test/**/*.test.js"
+    "spec": "node_modules/.bin/mocha --require test/bootstrap/node test/*.test.js test/**/*.test.js",
+    "lint": "eslint --ext .js . --max-warnings 0",
+    "lintfix": "eslint --ext .js . --fix",
+    "test": "npm run lint && npm run spec"
   }
 }

@@ -1,13 +1,9 @@
 language: "node_js"
 node_js:
-  - "5"
-  - "4"
-  - "3" # io.js
-  - "2" # io.js
-  - "1" # io.js
-  - "0.12"
-  - "0.10"
-  - "0.8"
+    - "6"
+    - "8"
+    - "10"
+    - "11"
 
 
 before_install:
@@ -16,6 +12,7 @@ before_install:
 
 script:
   - "make test-cov"
+  - "npm run-script lint"
 
 after_success:
   - "make report-cov"
